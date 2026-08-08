@@ -365,6 +365,13 @@ body{
     gap: 18px;
 }
 
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text);
+    font-weight: 500;
+}
+
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -383,6 +390,12 @@ body{
     outline: none;
 
     transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.15);
 }
 
 .contact-form button {
@@ -407,4 +420,124 @@ body{
 .contact-form button:hover {
     background: var(--primary-hover);
     transform: translateY(-3px);
+}
+
+.footer {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #333;
+
+    color: var(--text-secondary);
+
+    font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar .logo {
+        font-size: 1.4rem;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 100px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero h2 {
+        font-size: 1.4rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+        /* About */
+
+    .about {
+        padding: 80px 20px;
+    }
+
+    .about-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+
+    /* Projects */
+
+    .projects {
+        padding: 80px 20px;
+    }
+
+    .projects h2 {
+        font-size: 2rem;
+    }
+
+    .project-container {
+        padding: 0;
+    }
+
+    .project-card {
+        padding: 25px 20px;
+    }
+
+
+    /* Contact */
+
+    .contact {
+        padding: 80px 20px;
+    }
+
+    .contact-container h2 {
+        font-size: 2rem;
+    }
+
+    .contact-container p {
+        font-size: 0.95rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.95rem;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 25px 20px;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
 }
