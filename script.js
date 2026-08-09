@@ -52,15 +52,21 @@ contactForm.addEventListener("submit", function (event) {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (name === "" || email === "" || message === "") {
+        formMessage.classList.remove("success");
+        formMessage.classList.add("error");
         formMessage.textContent = "Please fill in all fields.";
         return;
     }
 
     if (!emailPattern.test(email)) {
+        formMessage.classList.remove("success");
+        formMessage.classList.add("error");
         formMessage.textContent = "Please enter a valid email.";
         return;
     }
 
+    formMessage.classList.remove("error");
+    formMessage.classList.add("success");
     formMessage.textContent = "Message sent successfully!";
 
     contactForm.reset();

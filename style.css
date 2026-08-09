@@ -548,4 +548,16 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.form-message.error {
+    color: #ff6b6b;
+    opacity: 1;
+}
+
+.form-message.success {
+    color: var(--primary);
+    opacity: 1;
 }
