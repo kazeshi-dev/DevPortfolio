@@ -541,3 +541,11 @@ body{
         font-size: 0.8rem;
     }
 }
+
+.contact-container .form-message {
+    min-height: 24px;
+    color: var(--primary);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+}

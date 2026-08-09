@@ -39,6 +39,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 const contactForm = document.querySelector(".contact-form");
+const formMessage = document.querySelector(".form-message");
 
 contactForm.addEventListener("submit", function (event) {
 
@@ -48,11 +49,20 @@ contactForm.addEventListener("submit", function (event) {
     const email = document.querySelector("#email").value.trim();
     const message = document.querySelector("#message").value.trim();
 
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (name === "" || email === "" || message === "") {
-        alert("Please fill in all fields.");
+        formMessage.textContent = "Please fill in all fields.";
         return;
     }
 
-    alert("Message sent successfully!");
+    if (!emailPattern.test(email)) {
+        formMessage.textContent = "Please enter a valid email.";
+        return;
+    }
+
+    formMessage.textContent = "Message sent successfully!";
+
+    contactForm.reset();
 
 });
