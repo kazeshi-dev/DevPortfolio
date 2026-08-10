@@ -48,6 +48,10 @@ body{
     backdrop-filter: blur(10px);
 }
 
+.menu-toggle {
+    display: none;
+}
+
 .logo {
     color: var(--primary);
     text-decoration: none;
@@ -445,11 +449,28 @@ body{
     }
 
     .nav-links {
+        display: none;
         gap: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        padding: 20px;
+        background-color: #1a1a1a;
+        border-radius: 8px;
     }
 
     .nav-links a {
         font-size: 0.9rem;
+    }
+
+    .menu-toggle {
+    display: block;
     }
 
     .hero {
