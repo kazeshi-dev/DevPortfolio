@@ -216,6 +216,28 @@ body{
     margin-bottom: 20px;
 }
 
+.project-button {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    background: var(--primary);
+    color: var(--text);
+
+    text-decoration: none;
+    font-size: 0.9rem;
+
+    transition: 0.3s;
+}
+
+.project-button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-3px);
+}
+
 .project-tech{
     display: flex;
     flex-wrap: wrap;
@@ -516,7 +538,7 @@ body{
     /* Projects */
 
     .projects {
-        padding: 80px 20px;
+        padding: 60px 20px;
     }
 
     .projects h2 {
@@ -525,10 +547,11 @@ body{
 
     .project-container {
         padding: 0;
+        grid-template-columns: 1fr;
     }
 
     .project-card {
-        padding: 25px 20px;
+        padding: 20px 18px;
     }
 
 
